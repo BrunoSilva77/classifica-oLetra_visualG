@@ -15,6 +15,7 @@ var
    tempo: inteiro
    numA,numB: inteiro
    i: inteiro
+   iA,iB: inteiro
 
 inicio
 
@@ -22,6 +23,8 @@ inicio
       i <- 0
       numB <- 0
       numA <- 0
+      iA <- 0
+      iB <- 0
 
       enquanto (tempo <= 4) faca
       
@@ -32,14 +35,16 @@ inicio
       
                se (original[i] = "A")entao
 
-                  a[i] <- "A"
+                  a[iA] <- "A"
+                  iA <- iA + 1
                   numA <- numA + 1
 
                fimse
                
                se (original[i] = "B") entao
                
-                  b[i] <- "B"
+                  b[iB] <- "B"
+                  iB <- iB + 1
                   numB <- numB + 1
                
                fimse
@@ -52,14 +57,24 @@ inicio
       escreval("Tiveram ", numA, " letras 'A' e ", numB, " letras 'B' nos elementos")
 
       i <- 0
-      tempo <- 0
       
-      enquanto (tempo <= 4)faca
+      escreval()
       
-               escreval("- " ,a[i], b[i])
+      enquanto ( i <= 4)faca
+      
+               escreval(a[i])
                
                i <- i + 1
-               tempo <- tempo + 1
+      
+      fimenquanto
+      
+      i <- 0
+      
+      enquanto ( i <= 4)faca
+      
+               escreval(b[i])
+               
+               i <- i + 1
       
       fimenquanto
 
